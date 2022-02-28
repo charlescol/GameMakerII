@@ -1,5 +1,5 @@
 # GameMakerII
-**GameMaker is an open source 2D game engine created with Qt library**.
+**GameMaker is an open source 2D game engine created with Qt library (only the source code is available to date)**
 
 **It allows to create maps via the import of tileset :**
 
@@ -24,3 +24,4 @@
 **The final game can be run from GameMaker with a single click :**
 
 ![p6](https://github.com/charlescol/GameMakerII/blob/main/Pictures/Untitled.png)
+
