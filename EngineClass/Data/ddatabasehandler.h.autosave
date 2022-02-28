@@ -1,0 +1,17 @@
+#ifndef DDATABASEHANDLER_H
+#define DDATABASEHANDLER_H
+
+#include <QtSql>
+
+class DDatabaseHandler : public QSqlDatabase
+{
+public:
+    static void open();
+    static void close();
+private :
+    DDatabaseHandler();
+protected :
+    static void clearTable();
+};
+
+#endif // DDATABASEHANDLER_H

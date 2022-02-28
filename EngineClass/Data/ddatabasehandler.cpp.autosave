@@ -1,0 +1,23 @@
+#include "ddatabasehandler.h"
+
+DDatabaseHandler::DDatabaseHandler() :
+    QSqlDatabase("QODBC3")
+{
+}
+
+void DDatabaseHandler::open() 
+{
+    QString serverName = "LOCALHOST\\SQLEXPRESS";
+
+    setConnectOptions();
+    QString dsn = QString("DRIVER={SQL Server};SERVER=%1;DATABASE=%2;Trusted_Connection=yes;").arg(serverName).arg(dbName);
+    setDatabaseName(dsn);
+
+    if(!open())
+        qDebug()<<"ERROR: "<< QSqlError(lastError()).text();
+}
+
+void DDatabaseHandler::close() 
+{
+    this->close();
+}

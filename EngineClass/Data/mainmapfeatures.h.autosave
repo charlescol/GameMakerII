@@ -1,0 +1,17 @@
+#ifndef MAINMAPFEATURES_H
+#define MAINMAPFEATURES_H
+
+#include "databasehandler.h"
+#include "EngineClass/Map/mapentity.h"
+#include <QMap>
+
+class DMainMapFeatures : public DDatabaseHandler
+{
+public:
+    static void addMapEntityToTable(const DMapEntity& mapEntity);
+    static void clearTable();
+private :
+    DMainMapFeatures();
+};
+
+#endif // MAINMAPFEATURES_H

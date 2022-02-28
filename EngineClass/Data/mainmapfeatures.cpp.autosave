@@ -1,0 +1,21 @@
+#include "mainmapfeatures.h"
+#include "EngineClass/Display/grid.h"
+#include "EngineClass/Map/tileentity.h"
+
+QString DMainMapFeatures::m_tableName = "MainMapFeatures";
+
+DMainMapFeatures::DMainMapFeatures()
+{}
+
+void DMainMapFeatures::addMapEntityToTable(const DMapEntity &mapEntity)
+{
+    QString sizeX(QString::number(mapEntity.getSize().width()));
+    QString sizeY(QString::number(mapEntity.getSize().height()));
+    QString tileSizeX(QString::number(DGrid::getTileSize().x()));
+    QString tileSizeY(QString::number(DGrid::getTileSize().y()));
+    QString sizePlaneEnum(QString::number(SIZE_planeEnum));
+
+    QString query = QString("INSERT INTO [GameMaker].[dbo].[%1] VALUES (%2,%3,%4,%5,%6,%7,%8,%9)").arg(m_tableName).arg(sizeX).arg(sizeY).arg(m_picturePath[tA]).arg(m_picturePath[tB]).arg(m_picturePath[tC]).arg(tileSizeX).arg(tileSizeY).arg(sizePlaneEnum);
+    if(!m_query.exec(query))
+        qDebug() << "ERREUR REQUETE SQL";
+}

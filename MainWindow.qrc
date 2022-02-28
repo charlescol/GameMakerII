@@ -1,0 +1,19 @@
+<RCC>
+    <qresource prefix="/design">
+        <file>Pictures/Accessory/fond.png</file>
+    </qresource>
+    <qresource prefix="/icons">
+        <file>Pictures/Icons/plan1.png</file>
+        <file>Pictures/Icons/plan2.png</file>
+        <file>Pictures/Icons/crayonPapierIcone.png</file>
+        <file>Pictures/Icons/Enrengistrer.png</file>
+        <file>Pictures/Icons/gomme.png</file>
+        <file>Pictures/Icons/Importer.png</file>
+        <file>Pictures/Icons/jouer.png</file>
+        <file>Pictures/Icons/oeil.png</file>
+        <file>Pictures/Icons/plan3.png</file>
+        <file>Pictures/Icons/script.png</file>
+        <file>Pictures/Icons/calculette.png</file>
+        <file>Pictures/Icons/collision.png</file>
+    </qresource>
+</RCC>
